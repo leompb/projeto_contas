@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,30 +14,40 @@
     <div class="row justify-content-center">
       <div class="col-lg-4">
         <div class="card">
+        
           <div class="card-header text-center">
             <h2 class="card-title">Projeto Contas</h2>
             <h5>Acesso ao Sistema</h5>
           </div>
+          
           <div class="card-body">
+          
             <form>
+            
               <div class="mb-3">
                 <label for="email" class="form-label">Email de acesso:</label>
                 <input type="email" class="form-control" id="email" name="email" required>
               </div>
+              
               <div class="mb-3">
                 <label for="senha" class="form-label">Senha de acesso:</label>
                 <input type="password" class="form-control" id="senha" name="senha" required>
               </div>
+              
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Entrar</button>
               </div>
+              
             </form>
+            
           </div>
+          
           <div class="card-footer text-center">
             <a href="/projeto_contas/criar-usuario">Criar Usuário</a> 
             | 
             <a href="/projeto_contas/recuperar-senha">Esqueci Minha Senha</a>
           </div>
+          
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,32 +14,44 @@
     <div class="row justify-content-center">
       <div class="col-lg-4">
         <div class="card">
+        
           <div class="card-header text-center">
             <h2 class="card-title">Projeto Contas</h2>
             <h5>Criar Usuário</h5>
           </div>
+          
           <div class="card-body">
-            <form>
-            	<div class="mb-3">
+          
+            <h4>${mensagem}</h4>
+            <form method="post" action="criar-usuario-post">
+            
+           	  <div class="mb-3">
                 <label for="nome" class="form-label">Nome do usuário:</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
+                <form:input path="dto.nome" type="text" class="form-control" id="nome" name="nome" />
               </div>
+              
               <div class="mb-3">
                 <label for="email" class="form-label">Email de acesso:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <form:input path="dto.email" type="email" class="form-control" id="email" name="email" />
               </div>
+              
               <div class="mb-3">
                 <label for="senha" class="form-label">Senha de acesso:</label>
-                <input type="password" class="form-control" id="senha" name="senha" required>
+                <form:input path="dto.senha" type="password" class="form-control" id="senha" name="senha" />
               </div>
+              
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Realizar Cadastro</button>
               </div>
+              
             </form>
+            
           </div>
+          
           <div class="card-footer text-center">
             <a href="/projeto_contas/">Voltar</a> 
           </div>
+          
         </div>
       </div>
     </div>
